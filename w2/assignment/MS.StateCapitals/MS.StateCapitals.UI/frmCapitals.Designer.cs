@@ -45,9 +45,9 @@
             // 
             lblStart.AutoSize = true;
             lblStart.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblStart.Location = new Point(486, 57);
+            lblStart.Location = new Point(425, 43);
             lblStart.Name = "lblStart";
-            lblStart.Size = new Size(184, 38);
+            lblStart.Size = new Size(143, 30);
             lblStart.TabIndex = 0;
             lblStart.Text = "The capital of";
             // 
@@ -55,16 +55,17 @@
             // 
             lblState.BorderStyle = BorderStyle.Fixed3D;
             lblState.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblState.Location = new Point(496, 103);
+            lblState.Location = new Point(425, 77);
             lblState.Name = "lblState";
-            lblState.Size = new Size(174, 48);
+            lblState.Size = new Size(152, 36);
             lblState.TabIndex = 1;
             // 
             // btnWisconsin
             // 
-            btnWisconsin.Location = new Point(69, 67);
+            btnWisconsin.Location = new Point(60, 50);
+            btnWisconsin.Margin = new Padding(3, 2, 3, 2);
             btnWisconsin.Name = "btnWisconsin";
-            btnWisconsin.Size = new Size(227, 54);
+            btnWisconsin.Size = new Size(199, 40);
             btnWisconsin.TabIndex = 2;
             btnWisconsin.Text = "Wisconsin";
             btnWisconsin.UseVisualStyleBackColor = true;
@@ -74,9 +75,9 @@
             // 
             lblMiddle.AutoSize = true;
             lblMiddle.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMiddle.Location = new Point(497, 151);
+            lblMiddle.Location = new Point(435, 113);
             lblMiddle.Name = "lblMiddle";
-            lblMiddle.Size = new Size(36, 38);
+            lblMiddle.Size = new Size(27, 30);
             lblMiddle.TabIndex = 3;
             lblMiddle.Text = "is";
             // 
@@ -84,16 +85,17 @@
             // 
             lblCapital.BorderStyle = BorderStyle.Fixed3D;
             lblCapital.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCapital.Location = new Point(497, 200);
+            lblCapital.Location = new Point(425, 149);
             lblCapital.Name = "lblCapital";
-            lblCapital.Size = new Size(173, 41);
+            lblCapital.Size = new Size(151, 31);
             lblCapital.TabIndex = 4;
             // 
             // btnCalifornia
             // 
-            btnCalifornia.Location = new Point(69, 127);
+            btnCalifornia.Location = new Point(60, 95);
+            btnCalifornia.Margin = new Padding(3, 2, 3, 2);
             btnCalifornia.Name = "btnCalifornia";
-            btnCalifornia.Size = new Size(227, 54);
+            btnCalifornia.Size = new Size(199, 40);
             btnCalifornia.TabIndex = 5;
             btnCalifornia.Text = "California";
             btnCalifornia.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@
             // 
             // btnIdaho
             // 
-            btnIdaho.Location = new Point(69, 187);
+            btnIdaho.Location = new Point(60, 140);
+            btnIdaho.Margin = new Padding(3, 2, 3, 2);
             btnIdaho.Name = "btnIdaho";
-            btnIdaho.Size = new Size(227, 54);
+            btnIdaho.Size = new Size(199, 40);
             btnIdaho.TabIndex = 6;
             btnIdaho.Text = "Idaho";
             btnIdaho.UseVisualStyleBackColor = true;
@@ -111,9 +114,10 @@
             // 
             // btnNebraska
             // 
-            btnNebraska.Location = new Point(69, 247);
+            btnNebraska.Location = new Point(60, 185);
+            btnNebraska.Margin = new Padding(3, 2, 3, 2);
             btnNebraska.Name = "btnNebraska";
-            btnNebraska.Size = new Size(227, 54);
+            btnNebraska.Size = new Size(199, 40);
             btnNebraska.TabIndex = 7;
             btnNebraska.Text = "Nebraska";
             btnNebraska.UseVisualStyleBackColor = true;
@@ -121,9 +125,10 @@
             // 
             // btnNewYork
             // 
-            btnNewYork.Location = new Point(69, 307);
+            btnNewYork.Location = new Point(60, 230);
+            btnNewYork.Margin = new Padding(3, 2, 3, 2);
             btnNewYork.Name = "btnNewYork";
-            btnNewYork.Size = new Size(227, 54);
+            btnNewYork.Size = new Size(199, 40);
             btnNewYork.TabIndex = 8;
             btnNewYork.Text = "New York";
             btnNewYork.UseVisualStyleBackColor = true;
@@ -131,9 +136,10 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(408, 289);
+            btnClear.Location = new Point(357, 217);
+            btnClear.Margin = new Padding(3, 2, 3, 2);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(165, 69);
+            btnClear.Size = new Size(144, 52);
             btnClear.TabIndex = 9;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
@@ -141,9 +147,10 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(579, 289);
+            btnExit.Location = new Point(507, 217);
+            btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(165, 69);
+            btnExit.Size = new Size(144, 52);
             btnExit.TabIndex = 10;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -151,10 +158,10 @@
             // 
             // frmCapitals
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Aquamarine;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(btnExit);
             Controls.Add(btnClear);
             Controls.Add(btnNewYork);
@@ -166,6 +173,7 @@
             Controls.Add(btnWisconsin);
             Controls.Add(lblState);
             Controls.Add(lblStart);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmCapitals";
             Text = "State Capitals";
             ResumeLayout(false);
