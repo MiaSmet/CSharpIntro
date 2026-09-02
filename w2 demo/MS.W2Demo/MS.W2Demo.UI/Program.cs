@@ -1,4 +1,4 @@
-namespace MS.StateCapitals.UI
+namespace MS.W2Demo.UI
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace MS.StateCapitals.UI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmCapitals());
+            Application.Run(new frmHello());
         }
     }
 }
