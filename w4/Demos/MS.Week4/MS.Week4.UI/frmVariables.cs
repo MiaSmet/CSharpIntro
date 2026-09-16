@@ -25,13 +25,13 @@ namespace MS.Week4.UI
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            int num1; //declare a variable
-            num1 = int.Parse(txtFirst.Text);
+            int intNum1; //declare a variable
+            intNum1 = int.Parse(txtFirst.Text);
 
             int num2;
             num2 = int.Parse(txtSecond.Text);
 
-            int total = num1 + num2;
+            int total = intNum1 + num2;
 
             lblResult.Text = total.ToString();
         }
