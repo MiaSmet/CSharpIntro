@@ -10,9 +10,6 @@ namespace MS.Week4.UI
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string strFirst = "10";
-            string strSecond = "5";
-
             int age = 30;
             int age2 = 5;
             int total = age + age2;
@@ -69,7 +66,7 @@ namespace MS.Week4.UI
 
                 lblTotalCost.Text = "Total: $" + total;
 
-                if (isOutOfStock = true)
+                if (isOutOfStock == true)
                 {
                     MessageBox.Show("Sorry, Out of stock");
                 }
