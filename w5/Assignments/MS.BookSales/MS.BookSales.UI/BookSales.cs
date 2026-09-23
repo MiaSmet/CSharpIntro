@@ -23,7 +23,7 @@ namespace MS.BookSales.UI
             {
                 //remove $ from the start if it's there
                 string strText = txtTotal.Text;
-                if (strText.Contains("$"))
+                if (strText.Contains('$'))
                 {
                     string strRemText = strText.Replace('$', ' ');
                     dblTotal = double.Parse(strRemText);
@@ -46,10 +46,6 @@ namespace MS.BookSales.UI
                 //Error handling for text and no input
                 MessageBox.Show("Please enter a number");
             }
-
-            
-
-            
             txtTotal.Focus();
             txtTotal.SelectAll();
         }
