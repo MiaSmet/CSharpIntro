@@ -31,6 +31,7 @@
             btnRock = new Button();
             btnPaper = new Button();
             btnScissors = new Button();
+            lblResult = new Label();
             SuspendLayout();
             // 
             // btnRock
@@ -63,11 +64,22 @@
             btnScissors.UseVisualStyleBackColor = true;
             btnScissors.Click += btnScissors_Click;
             // 
+            // lblResult
+            // 
+            lblResult.BorderStyle = BorderStyle.Fixed3D;
+            lblResult.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResult.Location = new Point(123, 93);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(529, 197);
+            lblResult.TabIndex = 3;
+            lblResult.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // rps
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblResult);
             Controls.Add(btnScissors);
             Controls.Add(btnPaper);
             Controls.Add(btnRock);
@@ -81,5 +93,6 @@
         private Button btnRock;
         private Button btnPaper;
         private Button btnScissors;
+        private Label lblResult;
     }
 }
