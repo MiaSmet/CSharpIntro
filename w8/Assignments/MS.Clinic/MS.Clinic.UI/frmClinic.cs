@@ -2,6 +2,7 @@ namespace MS.Clinic.UI
 {
     public partial class frmClinic : Form
     {
+        //declare global variables
         double total = 0;
         bool check1 = false;
         bool check2 = false;
