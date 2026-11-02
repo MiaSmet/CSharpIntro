@@ -15,12 +15,14 @@ namespace MS.SalesCommission.UI
             //instantiate and set variables
             string last = txtLast.Text;
             string first = txtFirst.Text;
+
             //check for a positive number in sales
             if (double.TryParse(txtSales.Text, out double sales) && sales >= 0)
             {
                 //calculate and output commission
                 double calc = sales * COMMISSION;
                 lblFinal.Text = sales.ToString("C");
+
                 //Check for names and output commission title
                 if(first == "" && last == "")
                 {
