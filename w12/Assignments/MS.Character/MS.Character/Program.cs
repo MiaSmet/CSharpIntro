@@ -1,11 +1,12 @@
 ﻿using System.Net.WebSockets;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MS.Character
 {
     internal class Program
     {
         
-        public class GameCharacter
+        internal class GameCharacter
         {
             public bool GameOver = false;
             public int Exp { get; set; }
@@ -22,9 +23,11 @@ namespace MS.Character
                 Exp += gainedExp;
                 Console.WriteLine(Name + " gained " + gainedExp + " experience!");
                 if(Exp >= 100)
-                Level++;
-                Strength += Random.Shared.Next(1, 10);
-                Console.WriteLine(Name + " gained a level!");
+                {
+                    Level++;
+                    Strength += Random.Shared.Next(1, 10);
+                    Console.WriteLine(Name + " gained a level!");
+                }
                 Health += 20;
                 if (Health > 100) Health = 100;
             }
@@ -59,7 +62,8 @@ namespace MS.Character
                 Console.WriteLine("Name: " + Name);
                 Console.WriteLine("Health: " + Health);
                 Console.WriteLine("Level: " + Level);
-                Console.WriteLine("Gold: " + Gold);
+                Console.WriteLine("EXP: " + Exp);
+                Console.WriteLine("Strength: " + Strength);
             }
 
             public void Search()
@@ -88,13 +92,18 @@ namespace MS.Character
                     Console.WriteLine("You don't have any potions!");
                 }
             }
+            public void Inventory()
+            {
+                Console.WriteLine("Potions: " + Potions);
+                Console.WriteLine("Gold: " + Gold);
+            }
         }
         static void Main(string[] args)
         {
             Console.Write("Please enter a name: ");
-            string name = Console.ReadLine();
-            Console.Write("choose Warrior, Wizard, or Archer: ");
-            string classChoice = Console.ReadLine();
+            string name = Console.ReadLine() ?? "";
+            Console.Write("Choose Warrior, Wizard, or Archer: ");
+            string classChoice = Console.ReadLine() ?? "";
             var character = new GameCharacter
                 {
                     Name = name,
@@ -127,9 +136,9 @@ namespace MS.Character
                 Potions = 3,
                 Strength = 5
             };
-            Console.WriteLine("What would you like to do? ");
             do
             {
+                Console.WriteLine("What would you like to do? ");
                 Console.WriteLine("1. Train");
                 Console.WriteLine("2. Take Damage");
                 Console.WriteLine("3. Heal");
@@ -137,7 +146,8 @@ namespace MS.Character
                 Console.WriteLine("5. Search for gold");
                 Console.WriteLine("6. Use a potion");
                 Console.WriteLine("7. Attack the enemy");
-                Console.WriteLine("8. Exit");
+                Console.WriteLine("8: Show inventory");
+                Console.WriteLine("9. Exit");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -158,35 +168,50 @@ namespace MS.Character
                     case "6":
                         character.UsePotion();
                         break;
+                    case "7":
+                        charAttack();
+                        break;
+                    case "8":
+                        character.Inventory();
+                        break;
                     default:
+                        Console.WriteLine("Enter a valid number");
                         break;
                 }
-                int gobChoice = Random.Shared.Next(1, 8);
+                Console.WriteLine("Goblin's Turn");
+                int gobChoice = Random.Shared.Next(1, 9);
                 switch (gobChoice)
                 {
                     case 1:
                         goblin.Train();
                         break;
                     case 2:
-                        character.TakeDamage();
+                        goblin.TakeDamage();
                         break;
                     case 3:
-                        character.Heal();
+                        goblin.Heal();
                         break;
                     case 4:
-                        character.ShowStats();
+                        goblin.ShowStats();
                         break;
                     case 5:
-                        character.Search();
+                        goblin.Search();
                         break;
                     case 6:
-                        character.UsePotion();
+                        goblin.UsePotion();
+                        break;
+                    case 7:
+                        gobAttack();
+                        break;
+                    case 8:
+                        goblin.Inventory();
                         break;
                     default:
+                        Console.WriteLine("Goblin does nothing!");
                         break;
                 }
                 if (character.GameOver) break;
-            } while (Console.ReadLine() != "8");
+            } while (Console.ReadLine() != "9");
             Console.WriteLine("Goodbye!");
 
             void charAttack()
